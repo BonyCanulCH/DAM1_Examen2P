@@ -5,7 +5,9 @@
       <map>
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/DAM1_Examen2P/app/src/main/res/layout/activity_bebidas.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Usuario/AndroidStudioProjects/DAM1_Examen2P/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/Usuario/AndroidStudioProjects/DAM1_Examen2P/app/src/main/res/layout/activity_pantalla_logeo.xml" value="0.25" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/DAM1_Examen2P/app/src/main/res/layout/activity_pantalla_final.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/DAM1_Examen2P/app/src/main/res/layout/activity_pantalla_logeo.xml" value="0.1" />
+        <entry key="..\:/Users/Usuario/AndroidStudioProjects/DAM1_Examen2P/app/src/main/res/layout/activity_pizzas.xml" value="0.33" />
       </map>
     </option>
   </component>

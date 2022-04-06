@@ -7,66 +7,38 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class PantallaLogeo extends AppCompatActivity {
-    TextView notificacion;
-    ImageView imv_opcpizza;
-    ImageView imv_opcbebida;
-    SharedPreferences preferences;
+    TextView textView_name;
+    SharedPreferences sharedPreferences;
 
+    private static final String SHARED_PREF_NAME = "mypref";
+    private static final String key_name = "name";
+    private static final String Key_password = "password";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_logeo);
-        notificacion = (TextView) findViewById(R.id.notificacion);
-        imv_opcpizza = (ImageView) findViewById(R.id.imv_opcpizza);
-        imv_opcbebida = (ImageView) findViewById(R.id.imv_opcbebida);
-        Bundle extras = getIntent().getExtras();
 
-        if(extras!=null){
-            String dato1 = extras.getString("Nombre");
-            if(!dato1.equals("")){
-                notificacion.setText("Bienvenido estimado"+dato1+" ¿qué te podemos llevar hacia tu casa? Por favor, selecciona:");
-            }
-            else
-                notificacion.setText("Los datos que enviaste son incorrectos");
-                LeerInfo();
+        textView_name = findViewById(R.id.notificacion);
+        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
 
+        String name = sharedPreferences.getString(key_name,null);
+        String password = sharedPreferences.getString(Key_password,null);
+
+        if(name!=null || password !=null){
+            textView_name.setText("Bienvenido " +name + "¿qué te podemos llevar hasta tu casa este día?");
         }
-        imv_opcpizza.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(PantallaLogeo.this,Pizzas.class);
-                startActivity(intent);
-            }
-        });
-        imv_opcbebida.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(PantallaLogeo.this,Bebidas.class);
-                startActivity(intent);
-            }
-        });
-        /*private void LeerInfo(){
-            preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
-            String dato1 = preferences.getString("Nombre","No hay dato");
-            if(!dato1.equals(""))
-                notificacion.setText("Bienvenido estimado"+dato1+" ¿qué te podemos llevar hacia tu casa? Por favor, selecciona:");
-            else
-                notificacion.setText("Los datos que enviaste son incorrectos");
-        }*/
-
-        //notificacion.setText("Hola estimado"+);
-
     }
-    private void LeerInfo(){
-        preferences = getSharedPreferences("datos", Context.MODE_PRIVATE);
-        String dato1 = preferences.getString("Nombre","No hay dato");
-        if(!dato1.equals(""))
-            notificacion.setText("Bienvenido estimado"+dato1+" ¿qué te podemos llevar hacia tu casa? Por favor, selecciona:");
-        else
-            notificacion.setText("Los datos que enviaste son incorrectos");
+    public void pizza (View view){
+        Intent pizza = new Intent(this,Pizzas.class);
+        startActivity(pizza);
     }
+    public void bebida (View view){
+        Intent bebida = new Intent(this,Bebidas.class);
+        startActivity(bebida);
+    }
+
 }

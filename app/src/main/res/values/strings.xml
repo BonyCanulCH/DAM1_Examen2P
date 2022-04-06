@@ -2,8 +2,16 @@
     <string name="app_name">DAM1_Examen2P</string>
     <string name="edtitle">Pizzería &quot;VitoLugini&quot;</string>
     <string name="edt_user">Ingresa tu nombre</string>
+    <string name="edt_password">Ingresa tu contraseña</string>
     <string name="btn_logear">Ingresar</string>
     <string name="txt_datos">Mostrar los datos</string>
     <string name="txt_opc1">Pizzas</string>
     <string name="txt_opc2">Bebidas</string>
+    <string name="pizza1">Pizza Tradicional - $100</string>
+    <string name="pizza2">Pizza Hawaiana - $170</string>
+    <string name="pizza3">Pizza Vegetariana - $200</string>
+    <string name="nombpza">Nombre de la Pizza</string>
+    <string name="camprecio">Precio</string>
+    <string name="inicio">Ir a Inicio</string>
+    <string name="sgte">Bebidas</string>
 </resources>
