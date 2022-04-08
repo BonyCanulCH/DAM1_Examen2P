@@ -7,9 +7,9 @@
     <string name="txt_datos">Mostrar los datos</string>
     <string name="txt_opc1">Pizzas</string>
     <string name="txt_opc2">Bebidas</string>
-    <string name="pizza1">Pizza Tradicional - $100</string>
-    <string name="pizza2">Pizza Hawaiana - $170</string>
-    <string name="pizza3">Pizza Vegetariana - $200</string>
+    <string name="tpizza1">Pizza Tradicional - $100</string>
+    <string name="tpizza2">Pizza Hawaiana - $170</string>
+    <string name="tpizza3">Pizza Vegetariana - $200</string>
     <string name="nombpza">Nombre de la Pizza</string>
     <string name="camprecio">Precio</string>
     <string name="inicio">Ir a Inicio</string>

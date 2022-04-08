@@ -6,4 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".PantallaFinal">
 
+    <TextView
+        android:id="@+id/mensaje1"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:text="mensaje"
+        android:textSize="30dp" />
+
+
+    <Button
+        android:id="@+id/regresar1"
+        android:layout_width="141dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/mensaje1"
+        android:layout_alignStart="@+id/mensaje1"
+        android:layout_alignEnd="@+id/mensaje1"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="207dp"
+        android:layout_marginEnd="81dp"
+        android:text="@string/inicio" />
+
+    <TextView
+        android:id="@+id/mensaje2"
+        android:layout_width="395dp"
+        android:layout_height="75dp"
+        android:layout_below="@id/mensaje1"
+        android:layout_alignStart="@+id/mensaje1"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="109dp"
+        android:text="Gracias por elegir VitoLugini"
+        android:textSize="30dp" />
+
 </RelativeLayout>

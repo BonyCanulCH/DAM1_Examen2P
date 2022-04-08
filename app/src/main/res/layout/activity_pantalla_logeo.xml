@@ -7,49 +7,46 @@
     tools:context=".PantallaLogeo">
 
     <TextView
-        android:id="@+id/notificacion"
-        android:layout_width="match_parent"
+        android:id="@+id/mensaje"
+        android:layout_width="344dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:gravity="center"
-        android:text="@string/txt_datos" />
+        android:text="mensaje" />
+
+    <ImageButton
+        android:id="@+id/boton1"
+        android:layout_width="236dp"
+        android:layout_height="171dp"
+        android:layout_below="@+id/mensaje"
+        android:layout_alignStart="@+id/mensaje"
+        android:layout_alignEnd="@+id/mensaje"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="92dp"
+        android:src="@drawable/imgpizzas" />
+
+    <ImageButton
+        android:id="@+id/boton2"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boton1"
+        android:layout_alignStart="@+id/boton1"
+        android:layout_alignEnd="@+id/boton1"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="-170dp"
+        android:layout_marginEnd="-117dp"
+        android:src="@drawable/bebida" />
 
     <Button
-        android:id="@+id/btn1op"
-        android:layout_width="196dp"
-        android:layout_height="227dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="200dp"
-        android:drawableBottom="@drawable/imgpizzas"
-        android:onClick="pizza"
-        android:text="Button"
-        app:strokeColor="#171616" />
-
-    <Button
-        android:id="@+id/btn2op"
-        android:layout_width="196dp"
-        android:layout_height="227dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="205dp"
-        android:drawableBottom="@drawable/imgbebida"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/opc1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/btn1op"
-        android:layout_marginLeft="70dp"
-        android:text="@string/txt_opc1" />
-
-    <TextView
-        android:id="@+id/opc2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_below="@id/btn1op"
-        android:layout_marginLeft="270dp"
-        android:text="@string/txt_opc2" />
+        android:id="@+id/regresar"
+        android:layout_width="118dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/boton2"
+        android:layout_alignStart="@+id/boton2"
+        android:layout_alignEnd="@+id/boton2"
+        android:layout_marginStart="-132dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="100dp"
+        android:text="Volver" />
 
 </RelativeLayout>

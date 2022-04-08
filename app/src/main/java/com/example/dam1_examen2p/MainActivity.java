@@ -12,45 +12,38 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    EditText editText_name;
-    EditText editText_password;
-    Button login;
-    SharedPreferences sharedPreferences;
-
-    private static final String SHARED_PREF_NAME = "mypref";
-    private static final String key_name = "name";
-    private static final String Key_password = "password";
-
+    EditText nombre,direccion;
+    Button iniciar;
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nombre = (EditText) findViewById(R.id.nombre);
+        direccion = (EditText) findViewById(R.id.contra);
+        iniciar = (Button) findViewById(R.id.boton);
 
-        editText_name = findViewById(R.id.nameuser);
-        editText_password= findViewById(R.id.namepassword);
-        login = findViewById(R.id.botonlogin);
-
-        sharedPreferences = getSharedPreferences(SHARED_PREF_NAME,MODE_PRIVATE);
-        String name= sharedPreferences.getString(key_name,null);
-        if (name !=null){
-            Intent intent= new Intent (MainActivity.this, PantallaLogeo.class );
-            startActivity(intent);
-        }
-
-        login.setOnClickListener(new View.OnClickListener() {
+        iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences.Editor editor =sharedPreferences.edit();
-                editor.putString(key_name,editText_name.getText().toString());
-                editor.putString(Key_password,editText_password.getText().toString());
-                editor.apply();
-
-                Intent intent = new Intent( MainActivity.this,PantallaLogeo.class);
+                String _nombre="";
+                String _direccion="";
+                _nombre = nombre.getText().toString();
+                _direccion = direccion.getText().toString();
+                GuardarDatos(_nombre,_direccion);
+                Intent intent = new Intent(MainActivity.this,PantallaLogeo.class);
+                //intent.putExtra("Nombre",_nombre);
+                //intent.putExtra("Direccion",_direccion);
                 startActivity(intent);
-
-                Toast.makeText(MainActivity.this, "login success", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+    private void GuardarDatos(String nombre, String direccion) {
+        preferences = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("Nombre",nombre);
+        editor.putString("Direccion",direccion);
+        editor.commit();
     }
 }
