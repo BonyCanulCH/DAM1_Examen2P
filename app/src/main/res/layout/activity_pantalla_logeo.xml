@@ -7,22 +7,22 @@
     tools:context=".PantallaLogeo">
 
     <TextView
-        android:id="@+id/mensaje"
+        android:id="@+id/notificacion"
         android:layout_width="344dp"
         android:layout_height="wrap_content"
-        android:text="mensaje" />
+        android:text="notificacion" />
 
     <ImageButton
         android:id="@+id/boton1"
         android:layout_width="236dp"
         android:layout_height="171dp"
-        android:layout_below="@+id/mensaje"
-        android:layout_alignStart="@+id/mensaje"
-        android:layout_alignEnd="@+id/mensaje"
+        android:layout_below="@+id/notificacion"
+        android:layout_alignStart="@+id/notificacion"
+        android:layout_alignEnd="@+id/notificacion"
         android:layout_centerInParent="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="85dp"
         android:src="@drawable/imgpizzas" />
 
     <ImageButton

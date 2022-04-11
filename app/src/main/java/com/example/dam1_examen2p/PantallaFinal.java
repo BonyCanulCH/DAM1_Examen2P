@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class PantallaFinal extends AppCompatActivity {
-    TextView mensaje1;
+    TextView notificacion1;
     Button regresar1;
 
     SharedPreferences preferences;
@@ -20,14 +20,14 @@ public class PantallaFinal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_final);
-        mensaje1 = (TextView) findViewById(R.id.mensaje1);
+        notificacion1 = (TextView) findViewById(R.id.notificacion1);
         regresar1 = (Button) findViewById(R.id.regresar1);
 
 
         Bundle extras = getIntent().getExtras();
         if(extras!=null){
             String dato1 = extras.getString("Nombre");
-            String dato2 = extras.getString("Direccion");
+            //String dato2 = extras.getString("Direccion");
             String dato3 = extras.getString("Pizza");
             String dato4 = extras.getString("Bebida");
             String dato5 = extras.getString("Preciob");
@@ -37,16 +37,16 @@ public class PantallaFinal extends AppCompatActivity {
             double nfinal= valor1 +valor2;
 
 
-            if(!dato1.equals("")&&!dato2.equals("")&&!dato3.equals("")&&!dato4.equals("")&&!dato5.equals("")&&!dato6.equals("")){
-                mensaje1.setText("Estimado "+dato1+" con direccion: " +dato2+ " has seleccionado la pizza " +dato3+ " con la bebida " +dato4+ " el total de la compra es: " +nfinal);
+            if(!dato1.equals("")&&!dato3.equals("")&&!dato4.equals("")&&!dato5.equals("")&&!dato6.equals("")){
+                notificacion1.setText("Estimado "+dato1+" has seleccionado la pizza " +dato3+ " acompañada con la bebida " +dato4+ ", su total a pagar es: " +nfinal);
 
             }
             else
-                mensaje1.setText("Los datos que enviaste son incorrectos");
+                notificacion1.setText("Los datos que enviaste son incorrectos");
 
         }
         else {
-            mensaje1.setText("No se envio ningun extra en el intent");
+            notificacion1.setText("No se envio ningun extra en el intent");
             LeerDatos();
         }
 
@@ -77,10 +77,10 @@ public class PantallaFinal extends AppCompatActivity {
 
 
         if(!dato1.equals("")&&!dato3.equals("")&&!dato4.equals("")&&!dato5.equals("")&&!dato6.equals(""))
-            mensaje1.setText("Estimado "+dato1+" has seleccionado la pizza " +dato3+" con la bebida "+dato4+ "el total de la compra es: " +nfinal);
+            notificacion1.setText("Estimado "+dato1+" has seleccionado la pizza " +dato3+" acompañada con la bebida "+dato4+ ", su total a pagar es: " +nfinal);
 
         else
-            mensaje1.setText("Los datos que enviaste son incorrectos nombre: "+dato1+" Pizza: " +dato3+ "Bebida: "+dato4);
+            notificacion1.setText("Los datos que enviaste son incorrectos nombre: "+dato1+" Pizza: " +dato3+ "Bebida: "+dato4);
 
 
     }

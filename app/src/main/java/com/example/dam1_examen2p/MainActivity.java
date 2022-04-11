@@ -12,7 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    EditText nombre,direccion;
+    EditText nombre,contra;
     Button iniciar;
     SharedPreferences preferences;
 
@@ -21,29 +21,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         nombre = (EditText) findViewById(R.id.nombre);
-        direccion = (EditText) findViewById(R.id.contra);
+        contra = (EditText) findViewById(R.id.contra);
         iniciar = (Button) findViewById(R.id.boton);
 
         iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String _nombre="";
-                String _direccion="";
+                String _contra="";
                 _nombre = nombre.getText().toString();
-                _direccion = direccion.getText().toString();
-                GuardarDatos(_nombre,_direccion);
+                _contra = contra.getText().toString();
+                GuardarDatos(_nombre);
                 Intent intent = new Intent(MainActivity.this,PantallaLogeo.class);
-                //intent.putExtra("Nombre",_nombre);
+                intent.putExtra("Nombre",_nombre);
                 //intent.putExtra("Direccion",_direccion);
                 startActivity(intent);
             }
         });
     }
-    private void GuardarDatos(String nombre, String direccion) {
+    private void GuardarDatos(String nombre) {
         preferences = getSharedPreferences("credenciales", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString("Nombre",nombre);
-        editor.putString("Direccion",direccion);
+        //editor.putString("Direccion",direccion);
         editor.commit();
     }
 }

@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class PantallaLogeo extends AppCompatActivity {
-    TextView mensaje;
+    TextView notificacion;
     Button regresar;
     ImageButton boton1;
     ImageButton boton2;
@@ -22,7 +22,7 @@ public class PantallaLogeo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_logeo);
-        mensaje = (TextView) findViewById(R.id.mensaje);
+        notificacion = (TextView) findViewById(R.id.notificacion);
         regresar = (Button) findViewById(R.id.regresar);
         boton1=(ImageButton) findViewById(R.id.boton1);
         boton2=(ImageButton) findViewById(R.id.boton2);
@@ -55,14 +55,14 @@ public class PantallaLogeo extends AppCompatActivity {
             String dato1 = extras.getString("Nombre");
             //String dato2 = extras.getString("Direccion");
             if(!dato1.equals("")){
-                mensaje.setText("Bienvenido "+dato1+" te haz logueado correctamente");
+                notificacion.setText("Bienvenido "+dato1+" te haz logueado correctamente");
             }
             else
-                mensaje.setText("Los datos que enviaste son incorrectos");
+                notificacion.setText("Los datos que enviaste son incorrectos");
 
         }
         else {
-            mensaje.setText("No se envio ningun extra en el intent");
+            notificacion.setText("No se envio ningun extra en el intent");
             LeerDatos();
         }
 
@@ -80,9 +80,9 @@ public class PantallaLogeo extends AppCompatActivity {
         String dato1 = preferences.getString("Nombre","No hay dato");
         //String dato2 = preferences.getString("Direccion","No hay dato");
         if(!dato1.equals(""))
-            mensaje.setText("Bienvenido "+dato1+" que te gustaria ordenar? ");
+            notificacion.setText("Hola estimado "+dato1+" ¿qué te podemos llevar hasta tu casa este día? Selecciona:");
         else
-            mensaje.setText("Los datos que enviaste son incorrectos nombre: "+dato1);
+            notificacion.setText("Los datos que enviaste son incorrectos nombre: "+dato1);
 
 
     }

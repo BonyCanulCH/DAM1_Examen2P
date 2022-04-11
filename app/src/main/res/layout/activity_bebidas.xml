@@ -9,9 +9,12 @@
 
     <TextView
         android:id="@+id/menubebida"
-        android:layout_width="262dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Escoge una bebida que desees" />
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:text="Elige la bebida que deseas" />
 
     <ImageView
         android:id="@+id/bebida1"
@@ -20,20 +23,22 @@
         android:layout_below="@+id/menubebida"
         android:layout_alignStart="@+id/menubebida"
         android:layout_alignEnd="@+id/menubebida"
-        android:layout_marginEnd="99dp"
+        android:layout_marginStart="-62dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="163dp"
         android:src="@drawable/squirt" />
 
     <ImageView
         android:id="@+id/bebida2"
-        android:layout_width="162dp"
-        android:layout_height="100dp"
+        android:layout_width="112dp"
+        android:layout_height="141dp"
         android:layout_below="@+id/bebida1"
         android:layout_alignStart="@+id/bebida1"
         android:layout_alignEnd="@+id/bebida1"
         android:layout_centerVertical="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginStart="-18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="-29dp"
         android:src="@drawable/cocacola" />
 
     <ImageView
@@ -45,13 +50,13 @@
         android:layout_alignEnd="@+id/bebida2"
         android:layout_centerVertical="true"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="-3dp"
         android:src="@drawable/pepsi" />
 
     <TextView
         android:id="@+id/costob1"
-        android:layout_width="285dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/menubebida"
         android:layout_marginStart="-45dp"
@@ -59,7 +64,9 @@
         android:layout_marginTop="41dp"
         android:layout_toEndOf="@+id/bebida1"
         android:layout_toRightOf="@id/bebida1"
-        android:text="Squirt $20" />
+        android:textColor="#000000"
+        android:text="Squirt $15" />
+
 
     <TextView
         android:id="@+id/costob2"
@@ -68,12 +75,12 @@
         android:layout_below="@+id/bebida2"
         android:layout_alignStart="@+id/bebida2"
         android:layout_centerVertical="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="67dp"
-        android:layout_marginTop="-57dp"
+        android:layout_marginStart="186dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="-50dp"
         android:layout_toRightOf="@id/bebida2"
-        android:text="Coca Cola $25" />
-
+        android:textColor="#000000"
+        android:text="Coca Cola $32" />
 
     <TextView
         android:id="@+id/costob3"
@@ -82,11 +89,12 @@
         android:layout_below="@+id/bebida3"
         android:layout_alignStart="@+id/bebida3"
         android:layout_centerVertical="true"
-        android:layout_marginStart="215dp"
-        android:layout_marginLeft="81dp"
-        android:layout_marginTop="-61dp"
+        android:layout_marginStart="201dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="-69dp"
         android:layout_toRightOf="@id/bebida3"
-        android:text="Pepsi $25" />
+        android:textColor="#000000"
+        android:text="Pepsi $27" />
 
     <EditText
         android:id="@+id/comprarb"
@@ -95,8 +103,8 @@
         android:layout_below="@id/bebida3"
         android:layout_alignParentStart="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="46dp"
         android:layout_weight="2"
         android:hint="Elige bebida"
         android:inputType="text" />
@@ -108,10 +116,10 @@
         android:layout_alignStart="@+id/comprarb"
         android:layout_alignEnd="@+id/comprarb"
         android:layout_alignBottom="@+id/comprarb"
-        android:layout_marginStart="170dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginEnd="-146dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="213dp"
+        android:layout_marginLeft="109dp"
+        android:layout_marginEnd="-189dp"
+        android:layout_marginBottom="5dp"
         android:layout_toRightOf="@id/comprarb"
         android:hint="@string/camprecio"
         android:inputType="number" />
@@ -121,19 +129,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/comprarb"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
-        android:text="pizzas" />
+        android:text="Bebidas" />
 
     <Button
         android:id="@+id/pagarb"
-        android:layout_width="wrap_content"
+        android:layout_width="203dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/menupizza"
         android:layout_alignBottom="@+id/menupizza"
-        android:layout_marginStart="87dp"
-        android:layout_marginTop="-1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="-4dp"
         android:layout_toEndOf="@+id/menupizza"
-        android:text="Pagar" />
+        android:text="Finalizar Pedido" />
 
 </RelativeLayout>
